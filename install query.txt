@@ -1,0 +1,16 @@
+After Entry all only daily deposit
+DELETE FROM acc_ledger_2018_01_01 WHERE reverse_head = 2010501 and account_id = 1010101 and credit = 0;
+
+After Entry Running Loan Create
+DELETE FROM acc_ledger_2018_01_01 WHERE reverse_head = 10107 and account_id = 1010101 and debit = 0;
+
+After Monthly Running Deposit Collection All Data Entry 
+DELETE FROM acc_ledger_2018_01_01 WHERE reverse_head = 20203 and account_id = 1010101 and credit = 0;
+
+After Running Loan Collection All Data Entry
+DELETE FROM acc_ledger_2018_01_01 WHERE account_id = 1010101 and credit = 0;
+
+Now NULL Value Set
+UPDATE acc_ledger_2018_01_01 SET serial_no=null,voucher_id=null;
+
+Now Opening Accounts Entry
